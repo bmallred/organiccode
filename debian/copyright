@@ -1,0 +1,13 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: organiccode
+Upstream-Contact: Bryan M. Allred <bryan.allred@gmail.com>
+Source: https://launchpad.net/organiccode
+
+Files: *
+Copyright: (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+Copyright: (C) 2013 Bryan M. Allred <bryan.allred@gmail.com>
+Copyright: (C) &lt;year&gt;  &lt;name of author&gt;
+Copyright: (C) <year>  &lt;name of author&gt;
+License: GPL-3
+ The full text of the GPL is distributed in
+ /usr/share/common-licenses/GPL-3 on Debian systems.

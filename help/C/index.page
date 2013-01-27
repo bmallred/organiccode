@@ -23,7 +23,7 @@
 <app>Organic Code</app> Help
 </title>
 
-<p>This is an example guide page. It's main function is to link together the help topics.</p>
+<p>A really simple help file for a really simple application.</p>
 
 <!-- This is the visible index -->
 <section id="contents" style="2column">
