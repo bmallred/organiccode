@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Organic Code
+_Comment=Organic Code application
+Categories=GNOME;Utility;
+Exec=organiccode
+Icon=organiccode
+Terminal=false
+Type=Application

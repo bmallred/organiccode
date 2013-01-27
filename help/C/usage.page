@@ -1,0 +1,23 @@
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="usage">
+	<info>
+		<link type="guide" xref="index#contents"/>
+		<credit type="author">
+			<name>Bryan M. Allred</name>
+			<email>bryan.allred@gmail.com</email>
+			<years>2013</years>
+		</credit>
+		<desc>General usage information.</desc>
+	</info>
+
+	<title>Common Usage</title>
+
+	<p>At the very minimum you need to select the project folder.</p>
+
+	<list>
+		<title>Commonly used settings</title>
+
+		<item><p>Height and width</p></item>
+		<item><p>Full Screen</p></item>
+		<item><p>Start position</p></item>
+	</list>
+</page>

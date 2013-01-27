@@ -1,0 +1,19 @@
+<page xmlns="http://projectmallard.org/1.0/" type="topic" id="gource">
+	<info>
+		<link type="guide" xref="index#contents"/>
+		<credit type="author">
+			<name>Bryan M. Allred</name>
+			<email>bryan.allred@gmail.com</email>
+			<years>2013</years>
+		</credit>
+		<desc>Information concerning Gource.</desc>
+	</info>
+
+	<title>Gource</title>
+	
+	<p>The actual rendering of the version control repositories is done by the use of <link href="http://code.google.com/p/gource">Gource</link>.</p>
+
+	<p>Installation on Ubuntu systems is as easy as running the following command:</p>
+
+	<p><cmd>sudo apt-get install gource</cmd></p>
+</page>

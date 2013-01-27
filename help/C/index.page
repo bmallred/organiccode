@@ -1,0 +1,36 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="index">
+
+<info>
+  <!-- This shows in the title bar so does not show [icon] -->
+  <title type="text">Organic Code</title>
+  <desc>The <app>Organic Code</app> help.</desc>
+  <credit type="author">
+    <name>Bryan M. Allred</name>
+    <email>bryan.allred@gmail.com</email>
+    <years>2013</years>
+  </credit>
+  <license href="http://www.gnu.org/licenses/gpl.html">
+  <p>GNU General Public License version 3.0 License</p>
+  </license>
+</info>
+
+<title>
+<!-- This shows on the page in title font -->
+<!-- the icon only shows when installed -->
+<media type="image" mime="image/png" src="figures/icon.png">[icon]</media>
+<app>Organic Code</app> Help
+</title>
+
+<p>This is an example guide page. It's main function is to link together the help topics.</p>
+
+<!-- This is the visible index -->
+<section id="contents" style="2column">
+<!-- other pages needs to have a link to index#contents for this to work -->
+<title>Contents</title>
+</section>
+
+<note></note>
+
+</page>
