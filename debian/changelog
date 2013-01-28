@@ -1,3 +1,9 @@
+organiccode (0.1-public1) quantal; urgency=low
+
+  * New release.
+
+ -- bmallred <bryan.allred@gmail.com>  Sun, 27 Jan 2013 13:31:01 -0500
+
 organiccode (0.1) quantal; urgency=low
 
   * Initial release.
