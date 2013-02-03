@@ -45,12 +45,30 @@ class OrganiccodeWindow(Window):
         self.noVsync = self.builder.get_object("noVsync")
         self.height = self.builder.get_object("height")
         self.width = self.builder.get_object("width")
+
         self.startPosition = self.builder.get_object("startPosition")
         self.stopPosition = self.builder.get_object("stopPosition")
         self.startScale = self.builder.get_object("startScale")
         self.stopScale = self.builder.get_object("stopScale")
         self.loop = self.builder.get_object("loop")
         self.status = self.builder.get_object("status")
+
+        self.key = self.builder.get_object("key")
+        self.highlightUsers = self.builder.get_object("highlightUsers")
+        self.highlightDirs = self.builder.get_object("highlightDirs")
+        self.transparent = self.builder.get_object("transparent")
+
+        self.hideBloom = self.builder.get_object("hideBloom")
+        self.hideDate = self.builder.get_object("hideDate")
+        self.hideDirnames = self.builder.get_object("hideDirnames")
+        self.hideFiles = self.builder.get_object("hideFiles")
+        self.hideFilenames = self.builder.get_object("hideFilenames")
+        self.hideMouse = self.builder.get_object("hideMouse")
+        self.hideProgress = self.builder.get_object("hideProgress")
+        self.hideRoot = self.builder.get_object("hideRoot")
+        self.hideTree = self.builder.get_object("hideTree")
+        self.hideUsers = self.builder.get_object("hideUsers")
+        self.hideUsernames = self.builder.get_object("hideUsernames")
 
     def on_openMenu_clicked(self, widget):
         self.projectFolder.click()
@@ -83,6 +101,23 @@ class OrganiccodeWindow(Window):
 
         if (self.loop.get_active()):
             args.append("--loop")
+
+        if (self.key.get_active()):
+            args.append("--key")
+
+        if (self.highlightUsers.get_active()):
+            args.append("--highlight-users")
+
+        if (self.highlightDirs.get_active()):
+            args.append("--highlight-dirs")
+
+        if (self.transparent.get_active()):
+            args.append("--transparent")
+
+        hiddenElements = self.getHiddenElements()
+        if (len(hiddenElements) > 0):
+            args.append("--hide")
+            args.append(hiddenElements)
 
         # Append the path of the project
         args.append(self.projectFolder.get_current_folder())
@@ -118,3 +153,41 @@ class OrganiccodeWindow(Window):
         if (isActive):
             self.startPosition.set_active(not isActive)
             self.stopPosition.set_active(not isActive)
+
+    def getHiddenElements(self):
+        elements = []
+
+        if (self.hideBloom.get_active()):
+            elements.append("bloom")
+
+        if (self.hideDate.get_active()):
+            elements.append("date")
+
+        if (self.hideDirnames.get_active()):
+            elements.append("dirnames")
+
+        if (self.hideFiles.get_active()):
+            elements.append("files")
+
+        if (self.hideFilenames.get_active()):
+            elements.append("filenames")
+
+        if (self.hideMouse.get_active()):
+            elements.append("mouse")
+
+        if (self.hideProgress.get_active()):
+            elements.append("progress")
+
+        if (self.hideRoot.get_active()):
+            elements.append("root")
+
+        if (self.hideTree.get_active()):
+            elements.append("tree")
+
+        if (self.hideUsers.get_active()):
+            elements.append("users")
+
+        if (self.hideUsernames.get_active()):
+            elements.append("usernames")
+
+        return ",".join(elements)
