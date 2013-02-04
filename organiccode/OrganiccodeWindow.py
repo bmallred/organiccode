@@ -39,7 +39,6 @@ class OrganiccodeWindow(Window):
         # Code for other initialization actions should be added here.
         self.openMenu = self.builder.get_object("mnu_open")
         self.projectFolder = self.builder.get_object("projectFolder")
-        self.generateButton = self.builder.get_object("generateButton")
         self.fullScreen = self.builder.get_object("fullScreen")
         self.multiSampling = self.builder.get_object("multiSampling")
         self.noVsync = self.builder.get_object("noVsync")
@@ -52,6 +51,12 @@ class OrganiccodeWindow(Window):
         self.stopScale = self.builder.get_object("stopScale")
         self.loop = self.builder.get_object("loop")
         self.status = self.builder.get_object("status")
+
+        self.toolbar = self.builder.get_object("toolbar")
+        self.generateButton = self.builder.get_object("generateButton")
+        self.exitButton = self.builder.get_object("exitButton")
+        self.aboutButton = self.builder.get_object("aboutButton")
+        self.mnu_about = self.builder.get_object("mnu_about")
 
         self.key = self.builder.get_object("key")
         self.highlightUsers = self.builder.get_object("highlightUsers")
@@ -70,8 +75,18 @@ class OrganiccodeWindow(Window):
         self.hideUsers = self.builder.get_object("hideUsers")
         self.hideUsernames = self.builder.get_object("hideUsernames")
 
+        # Style the toolbar.
+        context = self.toolbar.get_style_context()
+        context.add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)
+
     def on_openMenu_clicked(self, widget):
         self.projectFolder.click()
+
+    def on_exitButton_clicked(self, widget):
+        exit()
+
+    def on_aboutButton_clicked(self, widget):
+        self.mnu_about.activate()
 
     def on_generateButton_clicked(self, widget):
         self.status.set_label("Building parameters...")
